@@ -381,6 +381,7 @@
 "Assets/Scripts/Collectable.cs"
 "Assets/Scripts/Collidable.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Portal.cs"
 -langversion:9.0
 
 /deterministic
