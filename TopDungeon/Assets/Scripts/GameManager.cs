@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public List<int> XPTable;
 
     public Player Player;
+    public FloatingTextManager FloatingTextManager;
 
     public int Pesos;
     public int Experience;
@@ -61,5 +62,10 @@ public class GameManager : MonoBehaviour
 
         Pesos = int.Parse(data[1]);
         Experience = int.Parse(data[2]);
+    }
+
+    public void ShowText(string msg, int fontSize, Color color, Vector3 pos, Vector3 motion, float duration)
+    {
+        FloatingTextManager.Show(msg, fontSize, color, pos, motion, duration);
     }
 }

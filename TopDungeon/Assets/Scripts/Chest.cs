@@ -13,7 +13,14 @@ public class Chest : Collectable
         {
             _collected = true;
             GetComponent<SpriteRenderer>().sprite = _emptyChest;
-            Debug.Log($"Grant {_pesosAmount} pesos");
+            
+            var msg = $"+{_pesosAmount} pesos!";
+            var fontSize = 25;
+            var color = Color.yellow;
+            var pos = transform.position;
+            var motion = Vector3.up * 25;
+            var duration = 1.5f;
+            GameManager.Instance.ShowText(msg, fontSize, color, pos, motion, duration);
         }
     }
 }
