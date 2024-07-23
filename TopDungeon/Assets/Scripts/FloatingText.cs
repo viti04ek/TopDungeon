@@ -4,12 +4,12 @@ using UnityEngine.UI;
 public class FloatingText
 {
     private GameObject _go;
-    private Text _txt;
+    private Text _text;
     private Vector3 _motion;
     private float _duration;
     private float _lastShown;
     private bool _active;
-
+ 
     public void UpdateFloatingText()
     {
         if (!_active)
@@ -33,4 +33,18 @@ public class FloatingText
         _active = false;
         _go.SetActive(false);
     }
+    
+    public bool GetActive() => _active;
+
+    public GameObject GetGo() => _go;
+
+    public void SetGo(GameObject newGo) => _go = newGo;
+
+    public Text GetText() => _text;
+
+    public void SetText(Text newText) => _text = newText;
+
+    public void SetMotion(Vector3 newMotion) => _motion = newMotion;
+
+    public void SetDuration(float newDuration) => _duration = newDuration;
 }
