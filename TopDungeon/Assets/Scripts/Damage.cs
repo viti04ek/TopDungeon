@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damage : MonoBehaviour
+public class Damage
 {
     public Vector3 Origin { get; private set; }
     public int DamageAmount { get; private set; }

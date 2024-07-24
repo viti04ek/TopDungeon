@@ -381,6 +381,8 @@
 "Assets/Scripts/Collectable.cs"
 "Assets/Scripts/Collidable.cs"
 "Assets/Scripts/Damage.cs"
+"Assets/Scripts/Enemy.cs"
+"Assets/Scripts/Fighter.cs"
 "Assets/Scripts/FloatingText.cs"
 "Assets/Scripts/FloatingTextManager.cs"
 "Assets/Scripts/GameManager.cs"
