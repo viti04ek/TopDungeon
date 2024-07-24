@@ -25,6 +25,15 @@ public class Weapon : Collidable
             TryToSwing();
     }
 
+    protected override void OnCollide(Collider2D coll)
+    {
+        if (coll.CompareTag("Fighter") && coll.name != "Player")
+        {
+            var dmg = new Damage(transform.position, DamagePoint, PushForce);
+            coll.SendMessage("ReceiveDamage", dmg);
+        }
+    }
+
     private void TryToSwing()
     {
         if (Time.time - _lastSwing > _cooldown)
