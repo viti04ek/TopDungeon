@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Weapon : Collidable
 {
-    public int DamagePoint { get; private set; } = 1;
-    public float PushForce { get; private set; } = 2f;
+    [SerializeField] private int _damagePoint = 1;
+    [SerializeField] private float _pushForce = 2f;
     public int WeaponLevel { get; set; } = 0;
     private SpriteRenderer _spriteRenderer;
     private float _cooldown = 0.5f;
@@ -29,7 +29,7 @@ public class Weapon : Collidable
     {
         if (coll.CompareTag("Fighter") && coll.name != "Player")
         {
-            var dmg = new Damage(transform.position, DamagePoint, PushForce);
+            var dmg = new Damage(transform.position, _damagePoint, _pushForce);
             coll.SendMessage("ReceiveDamage", dmg);
         }
     }
