@@ -10,11 +10,14 @@ public class Weapon : Collidable
     private SpriteRenderer _spriteRenderer;
     private float _cooldown = 0.5f;
     private float _lastSwing;
+    private Animator _anim;
+    private const string _triggerName = "Swing";
 
     protected override void Start()
     {
         base.Start();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _anim = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -45,6 +48,6 @@ public class Weapon : Collidable
 
     private void Swing()
     {
-        Debug.Log("Swing");
+        _anim.SetTrigger(_triggerName);
     }
 }
